@@ -1,9 +1,16 @@
 # tronpy
+TRON Python Client Library. 
+Forked from [tronpy](https://github.com/andelf/tronpy), [origin documentation](https://tronpy.readthedocs.io/en/latest/index.html). 
 
-[![PyPI version](https://badge.fury.io/py/tronpy.svg)](https://pypi.org/project/tronpy/)
+Due to origin repo update is too slow, i push codes that has been verified in real world here. 
 
-TRON Python Client Library. [Documentation](https://tronpy.readthedocs.io/en/latest/index.html)
+More features:
+1. Contract events parser, inspired from [web3.contract.ContractEvents](https://web3py.readthedocs.io/en/stable/contracts.html#web3.contract.ContractEvents)
+2. More concise and pythonic codes. 
+3. Many convenient method for REAL blockchain exchange.
+4. Using [Poetry](https://python-poetry.org/) for package management.
 
+---
 ## How to use
 
 ```python
