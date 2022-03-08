@@ -6,6 +6,8 @@ from collections.abc import ByteString, Hashable
 import random
 from typing import Any, Union
 
+from eth_abi import encoding
+
 from tronpy.exceptions import BadKey, BadSignature, BadAddress
 
 
@@ -348,6 +350,10 @@ class Signature(ByteString):
 
     def __hex__(self) -> str:
         return self.hex()
+
+
+
+
 
 
 __all__ = [
