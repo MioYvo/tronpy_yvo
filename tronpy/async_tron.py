@@ -1,4 +1,4 @@
-from typing import Union, Tuple, Optional
+from typing import Optional
 import asyncio
 from typing import Union, Tuple
 import time
@@ -7,7 +7,7 @@ import json
 from decimal import Decimal
 
 from tronpy import keys
-from tronpy.async_contract import AsyncContract, ShieldedTRC20, AsyncContractMethod
+from tronpy.async_contract import AsyncContract, AsyncContractMethod
 from tronpy.keys import PrivateKey
 from tronpy.abi import tron_abi
 from tronpy.defaults import conf_for_name
@@ -860,11 +860,6 @@ class AsyncTron(object):
             client=self,
         )
         return cntr
-
-    async def get_contract_as_shielded_trc20(self, addr: TAddress) -> ShieldedTRC20:
-        """Get a Shielded TRC20 Contract object."""
-        contract = await self.get_contract(addr)
-        return ShieldedTRC20(contract)
 
     async def trigger_const_smart_contract_function(
         self, owner_address: TAddress, contract_address: TAddress, function_selector: str, parameter: str,

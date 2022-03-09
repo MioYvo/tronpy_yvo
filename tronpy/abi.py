@@ -1,4 +1,3 @@
-from eth_abi import encode_single, decode_single
 from eth_abi.decoding import Fixed32ByteSizeDecoder
 from eth_abi.encoding import Fixed32ByteSizeEncoder
 from eth_abi.registry import BaseEquals
@@ -64,4 +63,4 @@ trx_abi = ABICodec(registry)
 # alias
 tron_abi = trx_abi
 
-__all__ = ["trx_abi"]
+__all__ = ["trx_abi", "tron_abi"]

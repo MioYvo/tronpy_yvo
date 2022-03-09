@@ -5,7 +5,7 @@ Forked from [tronpy](https://github.com/andelf/tronpy), [origin documentation](h
 Due to origin repo update is too slow, i push codes that has been verified in real world here. 
 
 More features:
-1. Contract events parser, inspired from [web3.contract.ContractEvents](https://web3py.readthedocs.io/en/stable/contracts.html#web3.contract.ContractEvents)
+1. TransactionInfo event logs parser, inspired from [web3.contract.ContractEvents](https://web3py.readthedocs.io/en/stable/contracts.html#web3.contract.ContractEvents)
 2. More concise and pythonic codes. 
 3. Many convenient method for REAL blockchain exchange.
 4. Using [Poetry](https://python-poetry.org/) for package management.

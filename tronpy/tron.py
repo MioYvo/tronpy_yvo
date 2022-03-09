@@ -5,7 +5,7 @@ import json
 from decimal import Decimal
 
 from tronpy import keys
-from tronpy.contract import Contract, ShieldedTRC20, ContractMethod
+from tronpy.contract import Contract, ContractMethod
 from tronpy.keys import PrivateKey
 from tronpy.providers import HTTPProvider
 from tronpy.abi import tron_abi
@@ -775,7 +775,7 @@ class Tron(object):
     def get_asset(self, id: int = None, issuer: TAddress = None) -> dict:
         """Get TRC10(asset) info by asset's id or issuer."""
         if id and issuer:
-            return ValueError("either query by id or issuer")
+            raise ValueError("either query by id or issuer")
         if id:
             return self.provider.make_request("wallet/getassetissuebyid", {"value": id, "visible": True})
         else:
@@ -831,11 +831,6 @@ class Tron(object):
             client=self,
         )
         return cntr
-
-    def get_contract_as_shielded_trc20(self, addr: TAddress) -> ShieldedTRC20:
-        """Get a Shielded TRC20 Contract object."""
-        contract = self.get_contract(addr)
-        return ShieldedTRC20(contract)
 
     def trigger_const_smart_contract_function(
         self, owner_address: TAddress, contract_address: TAddress, function_selector: str, parameter: str,
