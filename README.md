@@ -2,7 +2,7 @@
 TRON Python Client Library. 
 Forked from [tronpy](https://github.com/andelf/tronpy), [origin documentation](https://tronpy.readthedocs.io/en/latest/index.html). 
 
-Due to origin repo update is too slow, i push codes that has been verified in real world here. 
+Due to origin repo's update is too slow, I push my updates here. 
 
 More features:
 1. TransactionInfo event logs parser, inspired from [web3.contract.ContractEvents](https://web3py.readthedocs.io/en/stable/contracts.html#web3.contract.ContractEvents)
